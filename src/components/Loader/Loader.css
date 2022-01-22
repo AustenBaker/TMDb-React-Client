@@ -1,0 +1,24 @@
+#loading {
+  align-self: center;
+  width: 100px;
+  height: 100px;
+  border: 5px solid rgba(0, 0, 0, 1.0);
+  border-radius: 50%;
+  border-top-color: #f00;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+  margin: 20px;
+}
+
+#loadingContainer{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+@keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
