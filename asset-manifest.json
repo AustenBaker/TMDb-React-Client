@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TMDb-React-Client/static/css/main.6e541e45.chunk.css",
-    "main.js": "/TMDb-React-Client/static/js/main.bf2259c9.chunk.js",
-    "main.js.map": "/TMDb-React-Client/static/js/main.bf2259c9.chunk.js.map",
+    "main.css": "/TMDb-React-Client/static/css/main.d5aeaf80.chunk.css",
+    "main.js": "/TMDb-React-Client/static/js/main.ab60c3cb.chunk.js",
+    "main.js.map": "/TMDb-React-Client/static/js/main.ab60c3cb.chunk.js.map",
     "runtime-main.js": "/TMDb-React-Client/static/js/runtime-main.f0aacaae.js",
     "runtime-main.js.map": "/TMDb-React-Client/static/js/runtime-main.f0aacaae.js.map",
     "static/js/2.0e0a170c.chunk.js": "/TMDb-React-Client/static/js/2.0e0a170c.chunk.js",
     "static/js/2.0e0a170c.chunk.js.map": "/TMDb-React-Client/static/js/2.0e0a170c.chunk.js.map",
     "index.html": "/TMDb-React-Client/index.html",
-    "static/css/main.6e541e45.chunk.css.map": "/TMDb-React-Client/static/css/main.6e541e45.chunk.css.map",
+    "static/css/main.d5aeaf80.chunk.css.map": "/TMDb-React-Client/static/css/main.d5aeaf80.chunk.css.map",
     "static/js/2.0e0a170c.chunk.js.LICENSE.txt": "/TMDb-React-Client/static/js/2.0e0a170c.chunk.js.LICENSE.txt",
     "static/media/email.a88b1134.svg": "/TMDb-React-Client/static/media/email.a88b1134.svg",
     "static/media/github.a6b8e8e3.svg": "/TMDb-React-Client/static/media/github.a6b8e8e3.svg",
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.f0aacaae.js",
     "static/js/2.0e0a170c.chunk.js",
-    "static/css/main.6e541e45.chunk.css",
-    "static/js/main.bf2259c9.chunk.js"
+    "static/css/main.d5aeaf80.chunk.css",
+    "static/js/main.ab60c3cb.chunk.js"
   ]
 }
