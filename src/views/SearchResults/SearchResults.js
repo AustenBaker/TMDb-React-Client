@@ -1,9 +1,8 @@
-import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
+import { GetSearchResults } from "../../api/GetSearchResults";
 import Card from "../../components/Movie/Card";
 import Pagination from "../../components/Pagination/Pagination";
-const TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
 
 function Skeleton() { return <div className="skeleton"></div> }
 
@@ -20,17 +19,10 @@ export default function SearchResults() {
   }
 
   const fetchSearchResults = async (key, currentPage) => {
-    try {
-      const url = 
-        "https://api.themoviedb.org/3/search/movie?api_key=" + TMDB_KEY 
-        + "&language=en-US&include_adult=false&query=" + key 
-        + '&page=' + currentPage;
-      const response = await axios(url);
-      setData(response.data);
-      setLoaded(true);
-    } catch(err) {
-      console.error(err);
-    }
+    let SearchResults = await GetSearchResults(key, currentPage);
+    setData(SearchResults);
+    setLoaded(true);
+ 
   }
 
   useEffect(() => {

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import Radio from "./components/Radio";
 import Card from "../../components/Movie/Card";
 import Pagination from "../../components/Pagination/Pagination";
+import { GetMovies } from "../../api/GetMovies";
 const html = document.querySelector('html');
-const TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
 
 function Skeleton() {
   return (<div className="skeleton"></div>);
@@ -21,15 +20,10 @@ export default function Home() {
     skeletons.push(<Skeleton key={i} />);
   }
 
-  const fetchMovies= async (selected, currentPage) => {
-    try{
-      const url = 'https://api.themoviedb.org/3/movie/' + selected + '?api_key=' +  TMDB_KEY + '&page=' + currentPage;
-      const response = await axios(url);
-      setData(response.data);
-      setLoaded(true);
-    }catch(err){
-      console.error(err);
-    }
+  const fetchMovies = async (selected, currentPage) => {
+    let movies = await GetMovies(selected, currentPage);
+    setData(movies);
+    setLoaded(true);
   };
   
   useEffect(() => {
@@ -38,7 +32,7 @@ export default function Home() {
   }, [selected, currentPage])
 
   if(loaded){
-    let backdropIMG = 'https://image.tmdb.org/t/p/original' + data.results[0].backdrop_path;
+    let backdropIMG = 'https://image.tmdb.org/t/p/w500' + data.results[0].backdrop_path;
     html.style.backgroundImage = 'url(' + backdropIMG + ')';
   }
 

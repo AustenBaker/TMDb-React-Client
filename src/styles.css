@@ -16,7 +16,6 @@ html, body {
 }
 
 html{
-  background-image: url("https://image.tmdb.org/t/p/original/8Y43POKjjKDGI9MH89NW0NAzzp8.jpg");
   background-attachment: fixed;
   background-position: center center;
   background-size: cover;

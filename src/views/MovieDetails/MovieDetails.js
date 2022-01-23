@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from 'axios';
 import { useParams } from "react-router-dom";
 import './MovieDetails.css';
 import Loader from "../../components/Loader/Loader";
+import { GetMovieDetails } from "../../api/GetMovieDetails";
 
 const html = document.querySelector('html');
-const TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
 
 export default function MovieDetails() {
   const { id } = useParams();
@@ -13,13 +12,9 @@ export default function MovieDetails() {
   const [data, setData] = useState([]);
 
   const fetchMovieDetails = async (id) => {
-    try{
-      const response = await axios("https://api.themoviedb.org/3/movie/" + id + "?api_key=" + TMDB_KEY + "&append_to_response=credits");
-      setData(response.data);
-      setLoaded(true);
-    }catch(err){
-      console.error(err);
-    }
+    const MovieDetails = await GetMovieDetails(id);
+    setData(MovieDetails);
+    setLoaded(true);
   };
 
   useEffect(() => {
