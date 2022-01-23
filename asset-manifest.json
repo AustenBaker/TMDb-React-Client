@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TMDb-React-Client/static/css/main.6e541e45.chunk.css",
-    "main.js": "/TMDb-React-Client/static/js/main.399c3276.chunk.js",
-    "main.js.map": "/TMDb-React-Client/static/js/main.399c3276.chunk.js.map",
+    "main.js": "/TMDb-React-Client/static/js/main.bf2259c9.chunk.js",
+    "main.js.map": "/TMDb-React-Client/static/js/main.bf2259c9.chunk.js.map",
     "runtime-main.js": "/TMDb-React-Client/static/js/runtime-main.f0aacaae.js",
     "runtime-main.js.map": "/TMDb-React-Client/static/js/runtime-main.f0aacaae.js.map",
     "static/js/2.0e0a170c.chunk.js": "/TMDb-React-Client/static/js/2.0e0a170c.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.f0aacaae.js",
     "static/js/2.0e0a170c.chunk.js",
     "static/css/main.6e541e45.chunk.css",
-    "static/js/main.399c3276.chunk.js"
+    "static/js/main.bf2259c9.chunk.js"
   ]
 }
