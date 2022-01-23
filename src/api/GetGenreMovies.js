@@ -1,10 +1,10 @@
 import axios from "axios";
 const TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
 
-export async function GetMovieDetails(id) {
+export async function GetGenreMovies(id, currentPage) {
 
   let response = await axios({
-    url: `https://api.themoviedb.org/3/movie/${id}?api_key=${TMDB_KEY}&append_to_response=credits`,
+    url: `https://api.themoviedb.org/3/discover/movie?api_key=${TMDB_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=${id}&page=${currentPage}`,
     method: "GET",
   });
 

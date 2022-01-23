@@ -9,6 +9,7 @@ export default function Nav(){
   const [input, setInput] = useState("");
 
   function handleChange(e) {
+    //update user's input 
     setInput(e.target.value);
   }
 
@@ -18,15 +19,16 @@ export default function Nav(){
     history.push("/key/" + input);
   }
 
-  function handleClick() {
-    //trigger Home.js
+  function handleLogoClick() {
+    //clear search input
     setInput("");
+    //trigger Home.js
     history.push("/");
   }
 
   return(
     <nav id="searchContainer">   
-      <img id="logo" src={logo} alt="logo" onClick={handleClick}></img>  
+      <img id="logo" src={logo} alt="logo" onClick={handleLogoClick}></img>  
 
       <form id="searchBar" onSubmit={handleSubmit}>
         <input 

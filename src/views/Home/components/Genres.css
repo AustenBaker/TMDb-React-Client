@@ -1,0 +1,25 @@
+#genreContainer{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 60px;
+  cursor: grab;
+  overflow: auto;
+}
+.genreButton{
+  display: flex;
+  align-items: center;
+  height: 40px;
+  padding: 20px;
+  margin-left: 20px;
+  font-size: 18px;
+  background-color: rgb(180, 180, 180);
+  color: black;
+  border-radius: 10px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+#genreContainer::-webkit-scrollbar{
+  display: none;
+}

@@ -12,6 +12,6 @@ export async function GetSearchResults(key, currentPage) {
     console.log("error");
   }
 
-  console.log("returning data", response.data.value);
+  //console.log("returning data", response.data.value);
   return response.data;
 }

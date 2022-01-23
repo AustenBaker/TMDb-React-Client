@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Radio from "./components/Radio";
 import Card from "../../components/Movie/Card";
+import Genres from "./components/Genres";
 import Pagination from "../../components/Pagination/Pagination";
-import { GetMovies } from "../../api/GetMovies";
+import { GetGenreMovies } from "../../api/GetGenreMovies";
 const html = document.querySelector('html');
 
 function Skeleton() {
@@ -10,7 +10,7 @@ function Skeleton() {
 }
 
 export default function Home() {
-  const [selected, setSelected] = useState("popular");
+  const [genreId, setGenreId] = useState("");
   const [data, setData] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
@@ -20,16 +20,16 @@ export default function Home() {
     skeletons.push(<Skeleton key={i} />);
   }
 
-  const fetchMovies = async (selected, currentPage) => {
-    let movies = await GetMovies(selected, currentPage);
+  const fetchGenreMovies = async (genreId, currentPage) => {
+    let movies = await GetGenreMovies(genreId, currentPage);
     setData(movies);
     setLoaded(true);
-  };
-  
+  }
+
   useEffect(() => {
     setLoaded(false);
-    fetchMovies(selected, currentPage);
-  }, [selected, currentPage])
+    fetchGenreMovies(genreId, currentPage);
+  }, [genreId, currentPage])
 
   if(loaded){
     let backdropIMG = 'https://image.tmdb.org/t/p/w500' + data.results[0].backdrop_path;
@@ -38,7 +38,7 @@ export default function Home() {
 
   return(
     <div>
-      <Radio setSelected={setSelected} />
+      <Genres setGenreId={setGenreId} />
       <div className="moviesContainer">
         {loaded ? data.results.map( movie => 
           <Card movie={movie} key={movie.id} /> 
