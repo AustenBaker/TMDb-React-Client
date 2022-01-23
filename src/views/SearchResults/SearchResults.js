@@ -6,7 +6,6 @@ import Pagination from "../../components/Pagination/Pagination";
 
 function Skeleton() { return <div className="skeleton"></div> }
 
-// TODO: Add pagination
 export default function SearchResults() {
   const { key } = useParams();
   const [data, setData] = useState([]);
@@ -22,7 +21,6 @@ export default function SearchResults() {
     let SearchResults = await GetSearchResults(key, currentPage);
     setData(SearchResults);
     setLoaded(true);
- 
   }
 
   useEffect(() => {

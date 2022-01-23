@@ -4,9 +4,8 @@ const TMDB_KEY = process.env.REACT_APP_TMDB_KEY;
 export async function GetMovies(selected, currentPage) {
 
   let response = await axios({
-    url: `https://api.themoviedb.org/3/movie/${selected}/?api_key=${TMDB_KEY}&page=${currentPage}`,
+    url: `https://api.themoviedb.org/3/movie/${selected}?api_key=${TMDB_KEY}&page=${currentPage}/`,
     method: "GET",
-    headers: { Authorization: "Bearer " + TMDB_KEY }
   });
 
   if (response.status !== 200 && response.status !== 204) {
