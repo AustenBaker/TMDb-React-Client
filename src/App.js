@@ -15,7 +15,7 @@ class App extends React.Component {
       <BrowserRouter>
         <Nav />
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact path="TMDb-React-Client/" component={Home} />
             <Route path="/details/:id" component={MovieDetails} />
             <Route path="/key/:key" component={SearchResults} />
           </Switch>
